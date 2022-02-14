@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+   --bright-orange: hsl(31, 77%, 52%);
+   --dark-cyan: hsl(184, 100%, 22%);
+   --very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   font-family: 'Big Shoulders Display', cursive;
+   font-family: 'Lexend Deca', sans-serif;
+   display: flex;
+   flex-direction: column;
+}
+
+.box-area{
+   width: 800px;
+   height: 400px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin: 10% auto;
+}
+
+.box-area .box-item{
+   width: 33.33%;
+   padding: 40px;
+   color: #fff;
+   display: inline-block;
+}
+
+.box-area .box-item img{
+   width: 60px;
+}
+
+.box-area .box-item h1{
+   font-family: 'Big Shoulders Display', cursive;
+   font-weight: 700;
+   font-size: max(40px, 3vw);
+}
+
+.box-area .box-item p{
+   font-size: 15px;
+   font-weight: 400;
+   margin: 50px 0;
+}
+
+.box-area .box-item button{
+   background: #fff;
+   border-radius: 20px;
+   border: 0;
+   padding: 10px;
+   font-size: 15px;
+   cursor: pointer;
+   border: 2px solid transparent;
+   transition: all ease .3s;
+}
+
+.box-area .box-item button:hover{
+   background: transparent;
+   border: 2px solid #fff;
+   color: #fff;
+}
+
+.box-item:nth-child(1) button{
+   color: var(--bright-orange);
+}
+
+.box-item:nth-child(2) button{
+   color: var(--dark-cyan);
+}
+
+.box-item:nth-child(3) button{
+   color: var(--very-dark-cyan);
+}
+
+.box-area .box-item:nth-child(1){
+   background-color: var(--bright-orange);
+   border-radius: 10px 0 0 10px;
+}
+
+.box-area .box-item:nth-child(2){
+   background-color: var(--dark-cyan);
+}
+
+.box-area .box-item:nth-child(3){
+   background-color: var(--very-dark-cyan);
+   border-radius: 0 10px 10px 0;
+}
+
+
+@media (max-width: 800px){
+
+   body{
+      padding: 0 20px;
+   }
+
+   .box-area{
+      width: 100%;
+      flex: 1;
+   }
+}
+
+@media (max-width: 640px){
+   .box-area{
+      flex: 1;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
+
+   .box-item{
+      min-width: 100%;
+   }
+
+   .box-area .box-item:nth-child(1){
+      border-radius: 10px 10px 0 0;
+   }
+   
+   .box-area .box-item:nth-child(3){
+      border-radius: 0 0 10px 10px;
+   }
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
